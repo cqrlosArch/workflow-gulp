@@ -3,12 +3,10 @@ const sourcemaps = require('gulp-sourcemaps');
 
 import { init as server, stream, reload } from 'browser-sync';
 
-import plumber from 'gulp-plumber';
+const { createGulpEsbuild } = require('gulp-esbuild');
+const gulpEsbuild = createGulpEsbuild();
 
-import browserify from 'browserify';
-import babelify from 'babelify';
-import source from 'vinyl-source-stream';
-import buffer from 'vinyl-buffer';
+import plumber from 'gulp-plumber';
 
 import cacheBust from 'gulp-cache-bust';
 
@@ -29,19 +27,21 @@ const production = mode.production() && 'true';
 
 const pluginsPostcss = [autoprefixer, cssnano];
 
-gulp.task('browserify', function () {
-  return browserify({
-    entries: './src/js/index.js',
-    transform: [babelify],
-  })
-    .plugin('tinyify')
-    .bundle()
-    .pipe(plumber())
-    .pipe(source('bundle.js'))
-    .pipe(buffer())
+gulp.task('esbuild', () => {
+  return gulp
+    .src('./src/js/index.js')
     .pipe(mode.development(sourcemaps.init()))
+    .pipe(
+      gulpEsbuild({
+        outfile: 'bundle.js',
+        bundle: true,
+        sourcemap: true,
+        minify: true,
+        target: 'es2015',
+      })
+    )
     .pipe(mode.development(sourcemaps.write('.')))
-    .pipe(gulp.dest('public/js/'));
+    .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('views', () => {
@@ -115,12 +115,10 @@ gulp.task('default', () => {
   gulp.watch('./src/views/**/*.pug', gulp.series('views')).on('change', reload);
   gulp.watch('./src/images/**/*.(svg|jpg|ico|png|jpeg)', gulp.series('imgMin'));
   gulp.watch('./src/scss/**/*.scss', gulp.series('sass'));
-  gulp
-    .watch('./src/js/**/*.js', gulp.series('browserify'))
-    .on('change', reload);
+  gulp.watch('./src/js/**/*.js', gulp.series('esbuild')).on('change', reload);
 });
 
 gulp.task(
   'build',
-  gulp.series(gulp.series('views', 'sass', 'browserify'), 'clean-css', 'imgMin')
+  gulp.series(gulp.series('views', 'sass', 'esbuild'), 'clean-css', 'imgMin')
 );

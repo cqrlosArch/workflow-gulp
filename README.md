@@ -1,9 +1,9 @@
 
 <h1 align="center">Gulp Workflow </h1>
 
-# Gulp Workflow to compile Babel, Sass, Pug and Images
+# Gulp Workflow to compile javascript, css, html and images
 
-Workflow of pug, sass and javascript workflow for static page projects.
+Workflow of pug, sass and esBuild for static page projects.
 
 Use Gulp version 4 to execute the tasks.
 
