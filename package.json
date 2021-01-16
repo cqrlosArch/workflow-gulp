@@ -1,6 +1,6 @@
 {
   "name": "workflow_gulp_2021",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Gulp Workflow to compile Babel, Sass, Pug and Images",
   "main": "src/index.js",
   "scripts": {
