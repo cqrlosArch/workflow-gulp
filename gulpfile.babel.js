@@ -79,7 +79,7 @@ gulp.task('sass', () => {
 
 gulp.task('imgMin', () => {
   return gulp
-    .src('./src/images/*')
+    .src('./src/images/**/*')
     .pipe(plumber())
     .pipe(
       mode.production(
@@ -115,7 +115,9 @@ gulp.task('default', () => {
   gulp.watch('./src/views/**/*.pug', gulp.series('views')).on('change', reload);
   gulp.watch('./src/images/**/*.(svg|jpg|ico|png|jpeg)', gulp.series('imgMin'));
   gulp.watch('./src/scss/**/*.scss', gulp.series('sass'));
-  gulp.watch('./src/js/**/*.js', gulp.series('browserify')).on('change', reload);
+  gulp
+    .watch('./src/js/**/*.js', gulp.series('browserify'))
+    .on('change', reload);
 });
 
 export const build = gulp.series(

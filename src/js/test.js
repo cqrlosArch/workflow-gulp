@@ -1,4 +1,4 @@
-console.log('test!!')
+console.log('test!!');
 
 export class Person {
   constructor(name, city) {
@@ -6,5 +6,3 @@ export class Person {
     this.city = city;
   }
 }
-
-
