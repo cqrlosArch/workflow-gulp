@@ -120,8 +120,7 @@ gulp.task('default', () => {
     .on('change', reload);
 });
 
-export const build = gulp.series(
-  gulp.series('views', 'sass', 'browserify'),
-  'clean-css',
-  'imgMin'
+gulp.task(
+  'build',
+  gulp.series(gulp.series('views', 'sass', 'browserify'), 'clean-css', 'imgMin')
 );
