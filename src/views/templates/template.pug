@@ -1,0 +1,17 @@
+block config
+    include ../config/vars
+doctype html
+html(lang="en")
+    head
+        title= pageTitle
+        meta(charset="utf-8")
+        meta(name="viewport" content="initial-scale=1.0, width=device-width")
+
+        link(rel='stylesheet' href='./css/styles.css')
+
+        block SEO
+
+    body.body
+        block main
+
+        script(type='module' src='js/bundle.js')
