@@ -3,7 +3,7 @@
 
 # Gulp Workflow to compile Babel, Sass, Pug and Images
 
-Workflow of pug, sass and javasceript workflow for static page projects.
+Workflow of pug, sass and javascript workflow for static page projects.
 
 Use Gulp version 4 to execute the tasks.
 
