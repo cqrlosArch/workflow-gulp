@@ -45,11 +45,11 @@ The `index.js` file is required in `src/js`
 
 ### Built With
 
-- [Gulp](https://reactjs.org/)
-- [esBuild](https://styled-components.com/)
-- [Sass](https://styled-components.com/)
-- [Pug](https://styled-components.com/)
-- [Browser-Sync](https://styled-components.com/)
+- [Gulp](https://gulpjs.com/)
+- [esBuild](https://esbuild.github.io/)
+- [Sass](https://sass-lang.com/)
+- [Pug](https://pugjs.org/api/getting-started.html)
+- [Browser-Sync](https://browsersync.io/)
 - [Imagemin](https://github.com/imagemin/imagemin)
 
 ## License
