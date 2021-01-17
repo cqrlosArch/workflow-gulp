@@ -46,6 +46,7 @@ gulp.task('esbuild', async () => {
       mode.development(
         gulpEsbuild_dev({
           outfile: 'bundle.js',
+          sourcemap:true,
           bundle: true,
         })
       )

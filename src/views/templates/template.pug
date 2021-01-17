@@ -1,17 +1,14 @@
 block config
     include ../config/vars
-doctype html
+doctype
 html(lang="en")
     head
         title= pageTitle
         meta(charset="utf-8")
-        meta(name="viewport" content="initial-scale=1.0, width=device-width")
-
-        link(rel='stylesheet' href='./css/styles.css')
-
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
         block SEO
-
-    body.body
+        block styles
+    body
         block main
 
-        script(type='module' src='js/bundle.js')
+        block scripts

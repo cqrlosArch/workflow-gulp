@@ -4,6 +4,12 @@ block SEO
     include ../includes/meta_tags
     include ../includes/favicons
 
+block styles
+    link(rel='stylesheet' href='./css/styles.css')
+
 block main
     include ../layout/header
     include ../layout/main_content
+
+block scripts
+    script(type='module' src='js/bundle.js')
