@@ -16,7 +16,7 @@ Use Browser Sync to mode development.
 ***
 
 <p align="center">
-  <img src="code.png">
+  <img src="screenshot.png">
 </p>
 
 ## How To Use
@@ -42,6 +42,15 @@ $ 'yarn build' or 'npm run build'
 ### Javascript
 
 The `index.js` file is required in `src/js`
+
+### Built With
+
+- [Gulp](https://reactjs.org/)
+- [esBuild](https://styled-components.com/)
+- [Sass](https://styled-components.com/)
+- [Pug](https://styled-components.com/)
+- [Browser-Sync](https://styled-components.com/)
+- [Imagemin](https://github.com/imagemin/imagemin)
 
 ## License
 

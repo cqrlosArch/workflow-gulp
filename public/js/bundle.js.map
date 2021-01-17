@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/js/module.js", "src/js/test.js", "src/js/index.js"],
-  "sourcesContent": ["const getData = async () => {\r\n  const res = await fetch('https://jsonplaceholder.typicode.com/users');\r\n  const json = await res.json();\r\n  return json;\r\n  \r\n};\r\n\r\nexport default getData", "console.log('test!!');\r\n\r\nexport class Person {\r\n  constructor(name, city) {\r\n    this.name = name;\r\n    this.city = city;\r\n  }\r\n}\r\n", "import getData from './module';\r\nimport { Person } from './test';\r\n\r\ngetData().then((data) => console.log(data));\r\n\r\nconst persona = new Person('Juan', 'Madrid');\r\nconsole.log(persona);\r\n"],
-  "mappings": "mNAAA,GAAM,GAAU,IAAY,0BAG1B,MADa,MAAM,AADP,MAAM,OAAM,+CACD,SAKlB,EAAQ,ECPf,QAAQ,IAAI,UAAZ,YAGE,YAAY,EAAM,GAChB,KAAK,KAAO,EACZ,KAAK,KAAO,ICFhB,IAAU,KAAK,AAAC,GAAS,QAAQ,IAAI,IAErC,GAAM,GAAU,GAAI,GAAO,OAAQ,UACnC,QAAQ,IAAI",
-  "names": []
-}

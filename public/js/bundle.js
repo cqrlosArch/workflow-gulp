@@ -1,2 +1,1 @@
 (()=>{var l=(s,e,t)=>new Promise((p,c)=>{var m=o=>{try{n(t.next(o))}catch(r){c(r)}},d=o=>{try{n(t.throw(o))}catch(r){c(r)}},n=o=>o.done?p(o.value):Promise.resolve(o.value).then(m,d);n((t=t.apply(s,e)).next())});var h=()=>l(void 0,null,function*(){return yield(yield fetch("https://jsonplaceholder.typicode.com/users")).json()}),i=h;console.log("test!!");var a=class{constructor(e,t){this.name=e,this.city=t}};i().then(s=>console.log(s));var u=new a("Juan","Madrid");console.log(u);})();
-//# sourceMappingURL=bundle.js.map
