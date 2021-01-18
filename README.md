@@ -39,10 +39,6 @@ $ 'yarn build' or 'npm run build'
 
 ## Details
 
-### Javascript
-
-The `index.js` file is required in `src/js`
-
 ### Built With
 
 - [Gulp](https://gulpjs.com/)
