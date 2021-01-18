@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-const sourcemaps = require('gulp-sourcemaps');
+import sourcemaps from 'gulp-sourcemaps'
 
 import { init as server, stream, reload } from 'browser-sync';
 
@@ -24,13 +24,12 @@ import imagemin from 'gulp-imagemin';
 
 const mode = require('gulp-mode')();
 
-const production = mode.production() && 'true';
-
 const pluginsPostcss = [autoprefixer, cssnano];
 
 gulp.task('esbuild', async () => {
   return gulp
     .src('./src/js/index.js')
+    .pipe(plumber())
     .pipe(mode.development(sourcemaps.init()))
     .pipe(
       mode.production(
@@ -46,7 +45,7 @@ gulp.task('esbuild', async () => {
       mode.development(
         gulpEsbuild_dev({
           outfile: 'bundle.js',
-          sourcemap:true,
+          sourcemap: true,
           bundle: true,
         })
       )
@@ -61,7 +60,7 @@ gulp.task('views', () => {
     .pipe(plumber())
     .pipe(
       pug({
-        pretty: production ? false : true,
+        pretty: !mode.production(),
       })
     )
     .pipe(
