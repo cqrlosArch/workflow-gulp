@@ -1,13 +1,14 @@
-@import './config/normalize.scss';
-@import './config/colors.scss';
-@import './config/breakpoints.scss';
+@import './abstracts/variables.scss';
+@import './abstracts/mixins.scss';
+@import './abstracts/functions.scss';
 
-@import './mixins/bpoint.scss';
-@import './mixins/fontface.scss';
+@import './vendor/normalize.scss';
 
+@import './base/general.scss';
 @import './base/fonts.scss';
-@import './base/base.scss';
 
-@import './layouts/header.scss';
-@import './layouts/main.scss';
+@import './layout/header.scss';
+@import './layout/main.scss';
+
+@import './pages/home.scss';
 
