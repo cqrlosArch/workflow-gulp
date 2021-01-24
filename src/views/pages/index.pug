@@ -5,11 +5,15 @@ block SEO
     include ../includes/favicons
 
 block styles
+    <!-- build:css -->
     link(rel='stylesheet' href='./css/styles.css')
+    <!-- endbuild -->
 
 block main
     include ../layout/header
     include ../layout/main_content
 
 block scripts
+    <!-- build:js -->
     script(type='module' src='js/bundle.js')
+    <!-- endbuild -->

@@ -1,5 +1,6 @@
 import gulp from 'gulp';
-import sourcemaps from 'gulp-sourcemaps'
+import sourcemaps from 'gulp-sourcemaps';
+import rename from 'gulp-rename';
 
 import { init as server, stream, reload } from 'browser-sync';
 
@@ -22,6 +23,8 @@ import purgecss from 'gulp-purgecss';
 
 import imagemin from 'gulp-imagemin';
 
+import htmlreplace from 'gulp-html-replace';
+
 const mode = require('gulp-mode')();
 
 const pluginsPostcss = [autoprefixer, cssnano];
@@ -34,7 +37,7 @@ gulp.task('esbuild', async () => {
     .pipe(
       mode.production(
         gulpEsbuild_build({
-          outfile: 'bundle.js',
+          outfile: 'bundle.min.js',
           bundle: true,
           minify: true,
           target: 'es2015',
@@ -68,6 +71,14 @@ gulp.task('views', () => {
         type: 'timestamp',
       })
     )
+    .pipe(
+      mode.production(
+        htmlreplace({
+          js: 'js/bundle.min.js',
+          css: 'css/styles.min.css',
+        })
+      )
+    )
     .pipe(gulp.dest('./public'));
 });
 
@@ -82,6 +93,7 @@ gulp.task('sass', async () => {
       }).on('error', sass.logError)
     )
     .pipe(mode.production(postcss(pluginsPostcss)))
+    .pipe(mode.production(rename('styles.min.css')))
     .pipe(mode.development(sourcemaps.write('.')))
     .pipe(gulp.dest('./public/css'))
     .pipe(stream());
