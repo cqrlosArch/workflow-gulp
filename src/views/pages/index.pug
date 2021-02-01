@@ -6,7 +6,7 @@ block SEO
 
 block styles
     <!-- build:css -->
-    link(rel='stylesheet' href='./css/styles.css')
+    link(rel="preload" href='./css/styles.css')
     <!-- endbuild -->
 
 block main
@@ -15,5 +15,5 @@ block main
 
 block scripts
     <!-- build:js -->
-    script(type='module' src='js/bundle.js')
+    script(type='module' src='js/bundle.js' defer)
     <!-- endbuild -->
