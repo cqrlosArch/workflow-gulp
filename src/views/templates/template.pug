@@ -1,12 +1,8 @@
 block config
-    include ../config/vars
 doctype
 html(lang="en")
     head
-        title= pageTitle
-        meta(charset="utf-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        block SEO
+        block metaTags
         block styles
     body
         block main
