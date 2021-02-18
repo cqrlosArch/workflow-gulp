@@ -74,8 +74,17 @@ gulp.task('views', () => {
     .pipe(
       mode.production(
         htmlreplace({
-          js: 'js/bundle.min.js',
-          css: 'css/styles.min.css',
+          js: {
+            src: 'js/bundle.min.js',
+            tpl: '<script type="module" src="%s" defer/>',
+          },
+          css: {
+            src: [
+              ['css/styles.min.css', 'js/bundle.min.js', 'css/styles.min.css'],
+            ],
+            tpl:
+              '<link rel="preload" href="%s" as="style"/><link rel="preload" href="%s" as="script"/><link rel="stylesheet" href="%s"/>',
+          },
         })
       )
     )
