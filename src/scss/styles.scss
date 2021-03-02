@@ -1,14 +1,14 @@
-@import './abstracts/variables.scss';
-@import './abstracts/mixins.scss';
-@import './abstracts/functions.scss';
+@use './abstracts/variables.scss';
+@use './abstracts/mixins.scss';
+@use './abstracts/functions.scss';
 
-@import './vendor/normalize.scss';
+@use './vendor/normalize.scss';
 
-@import './base/general.scss';
-@import './base/fonts.scss';
+@use './base/general.scss';
+@use './base/fonts.scss';
 
-@import './layout/header.scss';
-@import './layout/main.scss';
+@use './layout/header.scss';
+@use './layout/main.scss';
 
-@import './pages/home.scss';
+@use './pages/home.scss';
 

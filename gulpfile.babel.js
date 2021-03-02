@@ -14,7 +14,7 @@ import cacheBust from 'gulp-cache-bust';
 
 import pug from 'gulp-pug';
 
-import sass from 'gulp-sass';
+import sass from 'gulp-dart-sass';
 import cssnano from 'cssnano';
 import autoprefixer from 'autoprefixer';
 import postcss from 'gulp-postcss';
