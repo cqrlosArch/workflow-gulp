@@ -1,10 +1,10 @@
 {
   "name": "workflow_gulp",
-  "version": "3.5.3",
+  "version": "3.5.5",
   "description": "Gulp Workflow to compile JavaScript, Sass, Pug and Images",
   "main": "src/index.js",
   "scripts": {
-    "dev": "gulp --development",
+    "start": "gulp --development",
     "build": "rimraf public && gulp build --production"
   },
   "keywords": [

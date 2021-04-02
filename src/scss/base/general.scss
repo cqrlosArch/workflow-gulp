@@ -1,9 +1,15 @@
 @use '../abstracts/variables.scss' as c;
+@use './abstracts/mixins.scss' as mx;
+@use './abstracts/variables.scss' as f;
 
 html {
   background-color: c.$bg;
   box-sizing: border-box;
   font-size: 16px;
+
+  @include mx.md{
+    //mixins
+  }
 }
 
 *,

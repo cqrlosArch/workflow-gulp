@@ -31,7 +31,7 @@ $ git clone https://github.com/cqrlosArch/workflow-gulp
 $ 'yarn install' or 'npm install'
 
 # Run script mode development
-$ 'yarn dev' or 'npm run dev'
+$ 'yarn start' or 'npm start'
 
 # Run script mode production
 $ 'yarn build' or 'npm run build'

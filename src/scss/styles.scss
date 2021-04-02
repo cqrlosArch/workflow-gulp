@@ -1,14 +1,11 @@
-@use './abstracts/variables.scss';
-@use './abstracts/mixins.scss';
-@use './abstracts/functions.scss';
+//Normalize
+@use 'vendor/normalize';
 
-@use './vendor/normalize.scss';
+//base
+@use 'base';
 
-@use './base/general.scss';
-@use './base/fonts.scss';
+//Components
+@use 'layout';
 
-@use './layout/header.scss';
-@use './layout/main.scss';
-
-@use './pages/home.scss';
-
+//Pages
+@use 'pages';
