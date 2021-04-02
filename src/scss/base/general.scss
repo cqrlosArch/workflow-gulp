@@ -1,6 +1,9 @@
 @use '../abstracts/variables.scss' as c;
-@use './abstracts/mixins.scss' as mx;
-@use './abstracts/fonts.scss' as f;
+@use '../abstracts/mixins.scss' as mx;
+@use '../abstracts/functions.scss' as fx;
+
+@use '../base/fonts.scss' as f;
+
 
 html {
   background-color: c.$bg;
