@@ -76,7 +76,7 @@ gulp.task('views', () => {
         htmlreplace({
           js: {
             src: 'js/bundle.min.js',
-            tpl: '<script src="%s" defer></script>',
+            tpl: '<script src="%s" type="module"></script>',
           },
           css: {
             src: [
