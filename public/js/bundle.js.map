@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/js/module.js", "src/js/test.js", "src/js/index.js"],
+  "sourcesContent": ["const getData = async () => {\r\n  const res = await fetch('https://jsonplaceholder.typicode.com/users');\r\n  const json = await res.json();\r\n  return json;\r\n  \r\n};\r\n\r\nexport default getData", "console.log('test!!');\r\n\r\nexport class Person {\r\n  constructor(name, city) {\r\n    this.name = name;\r\n    this.city = city;\r\n  }\r\n}\r\n", "import getData from './module';\r\nimport { Person } from './test';\r\n\r\ngetData().then((data) => console.log(data));\r\n\r\nconst persona = new Person('Juan', 'Madrid');\r\nconsole.log(persona);\r\n"],
+  "mappings": ";;AAAA,MAAM,UAAU;AACd,UAAM,MAAM,MAAM,MAAM;AACxB,UAAM,OAAO,MAAM,IAAI;AACvB,WAAO;AAAA;AAIT,MAAO,iBAAQ;;;ACPf,UAAQ,IAAI;AAAZ;AAAA,IAGE,YAAY,MAAM;AAChB,WAAK,OAAO;AACZ,WAAK,OAAO;AAAA;AAAA;;;ACFhB,mBAAU,KAAK,CAAC,SAAS,QAAQ,IAAI;AAErC,MAAM,UAAU,IAAI,OAAO,QAAQ;AACnC,UAAQ,IAAI;",
+  "names": []
+}
