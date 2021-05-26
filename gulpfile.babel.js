@@ -83,7 +83,7 @@ gulp.task('views', () => {
               ['css/styles.min.css', 'js/bundle.min.js', 'css/styles.min.css'],
             ],
             tpl:
-              '<link rel="preload" href="%s" as="style"/><link rel="preload" href="%s" as="script"/><link rel="stylesheet" href="%s"/>',
+              '<link rel="preload" href="%s" as="style"/><link rel="modulepreload" href="%s"/><link rel="stylesheet" href="%s"/>',
           },
         })
       )
