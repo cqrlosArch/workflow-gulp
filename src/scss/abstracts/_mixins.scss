@@ -1,28 +1,28 @@
 @use './variables.scss' as bp;
 
 @mixin sm {
-  @media (min-width: #{bp.$screen-sm-min}) {
+  @media screen and (min-width: #{bp.$screen-sm-min}) {
     @content;
   }
 }
 
 // Medium devices
 @mixin md {
-  @media (min-width: #{bp.$screen-md-min}) {
+  @media screen and (min-width: #{bp.$screen-md-min}) {
     @content;
   }
 }
 
 // Large devices
 @mixin lg {
-  @media (min-width: #{bp.$screen-lg-min}) {
+  @media screen and (min-width: #{bp.$screen-lg-min}) {
     @content;
   }
 }
 
 // Extra large devices
 @mixin xl {
-  @media (min-width: #{bp.$screen-xl-min}) {
+  @media screen and (min-width: #{bp.$screen-xl-min}) {
     @content;
   }
 }
