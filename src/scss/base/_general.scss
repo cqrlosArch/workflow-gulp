@@ -9,9 +9,10 @@ html {
   background-color: c.$bg;
   box-sizing: border-box;
   font-size: 16px;
-
-  @include mx.md {
+  min-width: 1440px;
+  @include mx.point("md") {
     font-family: f.$montserrat-bold;
+    min-width: 990px;
   }
 }
 

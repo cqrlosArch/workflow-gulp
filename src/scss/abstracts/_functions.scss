@@ -1,0 +1,5 @@
+@use 'variables' as *;
+
+@function breakpoint($point) {
+  @return map-get($map: $beakpoints, $key: $point);
+}

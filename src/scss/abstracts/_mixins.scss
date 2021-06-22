@@ -1,28 +1,7 @@
-@use './variables.scss' as bp;
+@use 'functions' as f;
 
-@mixin sm {
-  @media screen and (min-width: #{bp.$screen-sm-min}) {
-    @content;
-  }
-}
-
-// Medium devices
-@mixin md {
-  @media screen and (min-width: #{bp.$screen-md-min}) {
-    @content;
-  }
-}
-
-// Large devices
-@mixin lg {
-  @media screen and (min-width: #{bp.$screen-lg-min}) {
-    @content;
-  }
-}
-
-// Extra large devices
-@mixin xl {
-  @media screen and (min-width: #{bp.$screen-xl-min}) {
+@mixin point($point) {
+  @media screen and (min-width: f.breakpoint($point)) {
     @content;
   }
 }
